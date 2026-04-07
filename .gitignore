@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+.ipynb_checkpoints/
+
+# Data files (don’t commit datasets)
+data/raw/
+data/curated/
+
+.DS_Store
