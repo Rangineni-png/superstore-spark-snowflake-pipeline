@@ -1,0 +1,7 @@
+-- 05_quality_checks.sql
+-- Row-count consistency checks across layers
+
+SELECT
+  (SELECT COUNT(*) FROM RETAIL_PIPELINE_DB.RAW.SUPERSTORE_RAW) AS raw_rows,
+  (SELECT COUNT(*) FROM RETAIL_PIPELINE_DB.CURATED.SUPERSTORE_CURATED_SPARK_V2) AS curated_spark_rows,
+  (SELECT COUNT(*) FROM RETAIL_PIPELINE_DB.GOLD.MONTHLY_SALES_PROFIT_SPARK) AS gold_month_rows;
